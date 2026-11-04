@@ -1,0 +1,1621 @@
+{
+ "raw_shape": [
+  5901,
+  23
+ ],
+ "missing_raw": {
+  "Returns": 5614,
+  "ind1": 5901,
+  "ind2": 5901
+ },
+ "dup_exact": 0,
+ "dup_excl_rowid": 0,
+ "dup_rowid": 1,
+ "dup_order_product": 7,
+ "product_id_multi_name": 28,
+ "date_range": [
+  "2019-01-01",
+  "2020-12-31"
+ ],
+ "orders_multi_date": 1,
+ "returned_by_year": {
+  "2019": 0,
+  "2020": 287
+ },
+ "returned_orders_by_year": [
+  {
+   "Order_Year": 2019,
+   "count": 0,
+   "size": 1315
+  },
+  {
+   "Order_Year": 2020,
+   "count": 104,
+   "size": 1688
+  }
+ ],
+ "returned_consistent_in_order": true,
+ "ship_before_order": 0,
+ "sales_nonpositive": 0,
+ "impossible_n": 14,
+ "impossible_by_year": {
+  "2019": 5,
+  "2020": 9
+ },
+ "impossible_profit": 29311.5504,
+ "profit_total_raw": 175262.1059,
+ "high_margin_n": 15,
+ "high_margin_profit": 11926.4838,
+ "margin_valid_positive_n": 4735,
+ "margin_loss_gt_sales_n": 108,
+ "iqr": {
+  "Quantity": {
+   "lo": -2.5,
+   "hi": 9.5,
+   "n": 86,
+   "pct": 1.460845931713946
+  },
+  "Profit": {
+   "lo": -37.8198,
+   "hi": 67.8066,
+   "n": 1120,
+   "pct": 19.024970273483948
+  }
+ },
+ "iqr_sales_by_year": {
+  "2019": {
+   "lo": -264.7575,
+   "hi": 489.10249999999996,
+   "n": 293,
+   "pct": 11.343399148277197
+  },
+  "2020": {
+   "lo": -147.62125000000003,
+   "hi": 558.8687500000001,
+   "n": 355,
+   "pct": 10.74455205811138
+  }
+ },
+ "shift_pairs": {
+  "2019_2019": {
+   "pairs": 135,
+   "same_sales_pct": 100.0,
+   "integer_nonzero_pct": 0.0,
+   "median_abs_diff": 0.0
+  },
+  "2019_2020": {
+   "pairs": 332,
+   "same_sales_pct": 0.0,
+   "integer_nonzero_pct": 100.0,
+   "median_abs_diff": 87.5
+  },
+  "2020_2020": {
+   "pairs": 203,
+   "same_sales_pct": 1.9704433497536946,
+   "integer_nonzero_pct": 97.53694581280789,
+   "median_abs_diff": 19.0
+  }
+ },
+ "shift_unit_ratio": {
+  "products": 1134,
+  "median": 2.990468484126535
+ },
+ "year_medians": [
+  {
+   "Order_Year": 2019,
+   "Baris": 2583,
+   "Order": 1313,
+   "Sales": 52.34,
+   "Quantity": 3.0,
+   "Profit": 8.7168,
+   "Margin": 0.27,
+   "Loss_Rate": 0.1846689895
+  },
+  {
+   "Order_Year": 2020,
+   "Baris": 3304,
+   "Order": 1687,
+   "Sales": 145.245,
+   "Quantity": 3.0,
+   "Profit": 8.236,
+   "Margin": 0.0560076294,
+   "Loss_Rate": 0.1879539952
+  }
+ ],
+ "shift_boundary": [
+  {
+   "Bulan": "2019-12",
+   "Sales": 61.9445,
+   "Profit": 10.4736
+  },
+  {
+   "Bulan": "2020-01",
+   "Sales": 136.88,
+   "Profit": 6.552
+  }
+ ],
+ "clean_shape": [
+  5887,
+  33
+ ],
+ "n_orders": 3000,
+ "n_customers": 773,
+ "n_products": 1755,
+ "n_states": 49,
+ "n_cities": 452,
+ "profit_total": 145950.55550000002,
+ "loss_rate": 0.186512655002548,
+ "loss_total": -91709.7279,
+ "gain_total": 237660.28340000001,
+ "skew": {
+  "Sales_2019": 6.753077517147871,
+  "Sales_2020": 5.394828872077233,
+  "SalesLog_2019": 0.286878798862749,
+  "SalesLog_2020": 1.4578957882019996
+ },
+ "describe": [
+  {
+   "Variabel": "Profit",
+   "n": 5887,
+   "mean": 24.792008748089014,
+   "median": 8.49,
+   "std": 201.95974360112874,
+   "q1": 1.7901,
+   "q3": 28.1967,
+   "min": -6599.978,
+   "max": 5039.9856,
+   "skew": -3.9687463855149914,
+   "kurt": 337.02025458553896
+  },
+  {
+   "Variabel": "Quantity",
+   "n": 5887,
+   "mean": 3.7779853915406827,
+   "median": 3.0,
+   "std": 2.2099621118865636,
+   "q1": 2.0,
+   "q3": 5.0,
+   "min": 1.0,
+   "max": 14.0,
+   "skew": 1.214213853742374,
+   "kurt": 1.7413980787817116
+  },
+  {
+   "Variabel": "Lama kirim (hari)",
+   "n": 5887,
+   "mean": 3.927976898250382,
+   "median": 4.0,
+   "std": 1.792661741777076,
+   "q1": 3.0,
+   "q3": 5.0,
+   "min": 0.0,
+   "max": 8.0,
+   "skew": -0.394564426401195,
+   "kurt": -0.41190903904418885
+  },
+  {
+   "Variabel": "Sales 2019",
+   "n": 2583,
+   "mean": 217.19316453735962,
+   "median": 52.34,
+   "std": 491.9646864476668,
+   "q1": 17.94,
+   "q3": 206.405,
+   "min": 0.836,
+   "max": 9099.93,
+   "skew": 6.753077517147871,
+   "kurt": 72.03699762646798
+  },
+  {
+   "Variabel": "Sales 2020",
+   "n": 3304,
+   "mean": 300.80948704600485,
+   "median": 145.245,
+   "std": 450.63539756219865,
+   "q1": 117.3125,
+   "q3": 293.935,
+   "min": 36.168,
+   "max": 5517.97,
+   "skew": 5.394828872077233,
+   "kurt": 40.285759914946006
+  },
+  {
+   "Variabel": "Harga satuan 2019",
+   "n": 2583,
+   "mean": 58.44384545286948,
+   "median": 15.992,
+   "std": 116.43767224186806,
+   "q1": 5.78,
+   "q3": 62.18,
+   "min": 0.336,
+   "max": 1637.53,
+   "skew": 5.84553792692938,
+   "kurt": 51.83528038867381
+  },
+  {
+   "Variabel": "Harga satuan 2020",
+   "n": 3304,
+   "mean": 96.22513397011585,
+   "median": 55.777,
+   "std": 140.62194739139338,
+   "q1": 33.946,
+   "q3": 111.58250000000001,
+   "min": 7.343692307692308,
+   "max": 3269.984,
+   "skew": 8.247309704017095,
+   "kurt": 123.7565111316814
+  },
+  {
+   "Variabel": "Margin 2019",
+   "n": 2583,
+   "mean": 0.12926062156104512,
+   "median": 0.27,
+   "std": 0.4447178127668249,
+   "q1": 0.0725,
+   "q3": 0.3625,
+   "min": -2.7,
+   "max": 0.6287642026164502,
+   "skew": -2.830605680885252,
+   "kurt": 10.179607473753698
+  },
+  {
+   "Variabel": "Margin 2020",
+   "n": 3304,
+   "mean": 0.05844334902702377,
+   "median": 0.05600762940151954,
+   "std": 0.2432514154131069,
+   "q1": 0.011280590224025512,
+   "q3": 0.14563027414362148,
+   "min": -5.372840790842872,
+   "max": 0.9801189860320745,
+   "skew": -6.355016187424639,
+   "kurt": 97.77887072321445
+  }
+ ],
+ "group_Category": [
+  {
+   "Category": "Office Supplies",
+   "Baris": 3566,
+   "Profit": 68795.0335,
+   "Median_Profit": 6.921,
+   "Loss_Rate": 0.1432978127,
+   "Margin_2019": 0.1717334291,
+   "Rugi_USD": -32562.5106
+  },
+  {
+   "Category": "Technology",
+   "Baris": 1073,
+   "Profit": 67561.4502,
+   "Median_Profit": 21.9978,
+   "Loss_Rate": 0.1519105312,
+   "Margin_2019": 0.1566345313,
+   "Rugi_USD": -24536.6729
+  },
+  {
+   "Category": "Furniture",
+   "Baris": 1248,
+   "Profit": 9594.0718,
+   "Median_Profit": 7.3658,
+   "Loss_Rate": 0.3397435897,
+   "Margin_2019": 0.035786488,
+   "Rugi_USD": -34610.5444
+  }
+ ],
+ "group_Sub-Category": [
+  {
+   "Sub-Category": "Accessories",
+   "Baris": 459,
+   "Profit": 24723.2118,
+   "Median_Profit": 20.7675,
+   "Loss_Rate": 0.1111111111,
+   "Margin_2019": 0.230674102,
+   "Rugi_USD": -621.5306
+  },
+  {
+   "Sub-Category": "Phones",
+   "Baris": 517,
+   "Profit": 21441.4562,
+   "Median_Profit": 19.755,
+   "Loss_Rate": 0.1721470019,
+   "Margin_2019": 0.1230631049,
+   "Rugi_USD": -4946.8054
+  },
+  {
+   "Sub-Category": "Copiers",
+   "Baris": 32,
+   "Profit": 21358.6798,
+   "Median_Profit": 355.49345,
+   "Loss_Rate": 0.0,
+   "Margin_2019": 0.3503323554,
+   "Rugi_USD": 0.0
+  },
+  {
+   "Sub-Category": "Paper",
+   "Baris": 825,
+   "Profit": 21112.3779,
+   "Median_Profit": 11.5432,
+   "Loss_Rate": 0.0,
+   "Margin_2019": 0.4187784549,
+   "Rugi_USD": 0.0
+  },
+  {
+   "Sub-Category": "Appliances",
+   "Baris": 279,
+   "Profit": 13166.6098,
+   "Median_Profit": 18.821,
+   "Loss_Rate": 0.1397849462,
+   "Margin_2019": 0.211627738,
+   "Rugi_USD": -3992.7221
+  },
+  {
+   "Sub-Category": "Chairs",
+   "Baris": 354,
+   "Profit": 12994.1638,
+   "Median_Profit": 8.14365,
+   "Loss_Rate": 0.418079096,
+   "Margin_2019": 0.0703521634,
+   "Rugi_USD": -5890.478
+  },
+  {
+   "Sub-Category": "Binders",
+   "Baris": 914,
+   "Profit": 12939.0059,
+   "Median_Profit": 4.179,
+   "Loss_Rate": 0.3927789934,
+   "Margin_2019": 0.1324248965,
+   "Rugi_USD": -22743.4362
+  },
+  {
+   "Sub-Category": "Storage",
+   "Baris": 496,
+   "Profit": 12551.2449,
+   "Median_Profit": 7.7452,
+   "Loss_Rate": 0.1794354839,
+   "Margin_2019": 0.0991381449,
+   "Rugi_USD": -3059.1613
+  },
+  {
+   "Sub-Category": "Furnishings",
+   "Baris": 573,
+   "Profit": 8034.4328,
+   "Median_Profit": 8.662,
+   "Loss_Rate": 0.167539267,
+   "Margin_2019": 0.1411800421,
+   "Rugi_USD": -4436.4233
+  },
+  {
+   "Sub-Category": "Art",
+   "Baris": 465,
+   "Profit": 3635.9257,
+   "Median_Profit": 3.72,
+   "Loss_Rate": 0.0,
+   "Margin_2019": 0.2372059089,
+   "Rugi_USD": 0.0
+  },
+  {
+   "Sub-Category": "Envelopes",
+   "Baris": 133,
+   "Profit": 3508.5073,
+   "Median_Profit": 12.9024,
+   "Loss_Rate": 0.0,
+   "Margin_2019": 0.436954834,
+   "Rugi_USD": 0.0
+  },
+  {
+   "Sub-Category": "Labels",
+   "Baris": 211,
+   "Profit": 2937.2212,
+   "Median_Profit": 6.8714,
+   "Loss_Rate": 0.0,
+   "Margin_2019": 0.4218290276,
+   "Rugi_USD": 0.0
+  },
+  {
+   "Sub-Category": "Fasteners",
+   "Baris": 124,
+   "Profit": 598.4175,
+   "Median_Profit": 3.5076,
+   "Loss_Rate": 0.0403225806,
+   "Margin_2019": 0.3062837062,
+   "Rugi_USD": -7.0569
+  },
+  {
+   "Sub-Category": "Machines",
+   "Baris": 65,
+   "Profit": 38.1024,
+   "Median_Profit": 41.88,
+   "Loss_Rate": 0.3538461538,
+   "Margin_2019": 0.0560102565,
+   "Rugi_USD": -18968.3369
+  },
+  {
+   "Sub-Category": "Bookcases",
+   "Baris": 131,
+   "Profit": -342.8883,
+   "Median_Profit": 6.549,
+   "Loss_Rate": 0.4503816794,
+   "Margin_2019": 0.0093857064,
+   "Rugi_USD": -5072.995
+  },
+  {
+   "Sub-Category": "Supplies",
+   "Baris": 119,
+   "Profit": -1654.2767,
+   "Median_Profit": 4.9728,
+   "Loss_Rate": 0.1596638655,
+   "Margin_2019": -0.0489553619,
+   "Rugi_USD": -2760.1341
+  },
+  {
+   "Sub-Category": "Tables",
+   "Baris": 190,
+   "Profit": -11091.6365,
+   "Median_Profit": -33.37965,
+   "Loss_Rate": 0.6368421053,
+   "Margin_2019": -0.0493194711,
+   "Rugi_USD": -19210.6481
+  }
+ ],
+ "group_Region": [
+  {
+   "Region": "West",
+   "Baris": 1899,
+   "Profit": 60131.9942,
+   "Median_Profit": 10.7301,
+   "Loss_Rate": 0.102685624,
+   "Margin_2019": 0.1296721157,
+   "Rugi_USD": -15444.6291
+  },
+  {
+   "Region": "East",
+   "Baris": 1682,
+   "Profit": 46701.1721,
+   "Median_Profit": 8.10345,
+   "Loss_Rate": 0.1920332937,
+   "Margin_2019": 0.1101343978,
+   "Rugi_USD": -28680.4468
+  },
+  {
+   "Region": "South",
+   "Baris": 930,
+   "Profit": 26293.7292,
+   "Median_Profit": 8.3524,
+   "Loss_Rate": 0.1720430108,
+   "Margin_2019": 0.1997829111,
+   "Rugi_USD": -15428.8742
+  },
+  {
+   "Region": "Central",
+   "Baris": 1376,
+   "Profit": 12823.66,
+   "Median_Profit": 5.3076,
+   "Loss_Rate": 0.3052325581,
+   "Margin_2019": 0.054839562,
+   "Rugi_USD": -32155.7778
+  }
+ ],
+ "group_Segment": [
+  {
+   "Segment": "Consumer",
+   "Baris": 2993,
+   "Profit": 68515.7093,
+   "Median_Profit": 8.4888,
+   "Loss_Rate": 0.1834279987,
+   "Margin_2019": 0.1121011501,
+   "Rugi_USD": -42752.7428
+  },
+  {
+   "Segment": "Corporate",
+   "Baris": 1769,
+   "Profit": 47553.3102,
+   "Median_Profit": 8.673,
+   "Loss_Rate": 0.1888072357,
+   "Margin_2019": 0.1181084195,
+   "Rugi_USD": -29319.6341
+  },
+  {
+   "Segment": "Home Office",
+   "Baris": 1125,
+   "Profit": 29881.536,
+   "Median_Profit": 8.2194,
+   "Loss_Rate": 0.1911111111,
+   "Margin_2019": 0.1400483629,
+   "Rugi_USD": -19637.351
+  }
+ ],
+ "group_Ship Mode": [
+  {
+   "Ship Mode": "Standard Class",
+   "Baris": 3446,
+   "Profit": 84626.8304,
+   "Median_Profit": 8.1208,
+   "Loss_Rate": 0.1935577481,
+   "Margin_2019": 0.1096957884,
+   "Rugi_USD": -56754.436
+  },
+  {
+   "Ship Mode": "Second Class",
+   "Baris": 1143,
+   "Profit": 34949.0002,
+   "Median_Profit": 9.1746,
+   "Loss_Rate": 0.1644794401,
+   "Margin_2019": 0.1375461603,
+   "Rugi_USD": -13259.233
+  },
+  {
+   "Ship Mode": "First Class",
+   "Baris": 954,
+   "Profit": 17565.9006,
+   "Median_Profit": 8.0408,
+   "Loss_Rate": 0.1981132075,
+   "Margin_2019": 0.116617806,
+   "Rugi_USD": -15296.8385
+  },
+  {
+   "Ship Mode": "Same Day",
+   "Baris": 344,
+   "Profit": 8808.8243,
+   "Median_Profit": 9.222,
+   "Loss_Rate": 0.1569767442,
+   "Margin_2019": 0.1576678515,
+   "Rugi_USD": -6399.2204
+  }
+ ],
+ "group_Payment Mode": [
+  {
+   "Payment Mode": "COD",
+   "Baris": 2449,
+   "Profit": 70781.9289,
+   "Median_Profit": 8.763,
+   "Loss_Rate": 0.1870151082,
+   "Margin_2019": 0.1721057834,
+   "Rugi_USD": -37309.2995
+  },
+  {
+   "Payment Mode": "Online",
+   "Baris": 2161,
+   "Profit": 48077.6977,
+   "Median_Profit": 8.5025,
+   "Loss_Rate": 0.1804720037,
+   "Margin_2019": 0.0978467298,
+   "Rugi_USD": -30458.2706
+  },
+  {
+   "Payment Mode": "Cards",
+   "Baris": 1277,
+   "Profit": 27090.9289,
+   "Median_Profit": 7.6284,
+   "Loss_Rate": 0.1957713391,
+   "Margin_2019": 0.0596456673,
+   "Rugi_USD": -23942.1578
+  }
+ ],
+ "state_top_loss": [
+  {
+   "State": "Texas",
+   "Baris": 564,
+   "Profit": -14201.6335,
+   "Median_Profit": 0.5904,
+   "Loss_Rate": 0.4804964539,
+   "Margin_2019": -0.1344526387,
+   "Rugi_USD": -19430.9679
+  },
+  {
+   "State": "Illinois",
+   "Baris": 293,
+   "Profit": -9554.6539,
+   "Median_Profit": -1.3208,
+   "Loss_Rate": 0.5085324232,
+   "Margin_2019": -0.1335519363,
+   "Rugi_USD": -12724.8099
+  },
+  {
+   "State": "Ohio",
+   "Baris": 293,
+   "Profit": -9339.4223,
+   "Median_Profit": 1.7055,
+   "Loss_Rate": 0.4163822526,
+   "Margin_2019": -0.30721239,
+   "Rugi_USD": -12570.4997
+  },
+  {
+   "State": "Pennsylvania",
+   "Baris": 335,
+   "Profit": -9297.7975,
+   "Median_Profit": 0.4264,
+   "Loss_Rate": 0.4865671642,
+   "Margin_2019": -0.1546181381,
+   "Rugi_USD": -13304.5493
+  },
+  {
+   "State": "Colorado",
+   "Baris": 114,
+   "Profit": -5825.5857,
+   "Median_Profit": 3.1248,
+   "Loss_Rate": 0.3947368421,
+   "Margin_2019": -0.1302302737,
+   "Rugi_USD": -6931.5661
+  },
+  {
+   "State": "North Carolina",
+   "Baris": 159,
+   "Profit": -4827.6923,
+   "Median_Profit": 3.6588,
+   "Loss_Rate": 0.3018867925,
+   "Margin_2019": 0.0174274031,
+   "Rugi_USD": -7609.0414
+  },
+  {
+   "State": "Tennessee",
+   "Baris": 120,
+   "Profit": -3467.5906,
+   "Median_Profit": 2.6137,
+   "Loss_Rate": 0.35,
+   "Margin_2019": -0.0521655688,
+   "Rugi_USD": -4585.1215
+  },
+  {
+   "State": "Arizona",
+   "Baris": 113,
+   "Profit": -2761.11,
+   "Median_Profit": 2.388,
+   "Loss_Rate": 0.389380531,
+   "Margin_2019": -0.2379210156,
+   "Rugi_USD": -4055.2589
+  },
+  {
+   "State": "Oregon",
+   "Baris": 65,
+   "Profit": -942.9719,
+   "Median_Profit": 2.336,
+   "Loss_Rate": 0.4153846154,
+   "Margin_2019": -0.103809048,
+   "Rugi_USD": -1800.8875
+  },
+  {
+   "State": "Florida",
+   "Baris": 212,
+   "Profit": -227.7465,
+   "Median_Profit": 2.7876,
+   "Loss_Rate": 0.3301886792,
+   "Margin_2019": -0.0346881766,
+   "Rugi_USD": -3234.7113
+  }
+ ],
+ "state_top_profit": [
+  {
+   "State": "California",
+   "Baris": 1188,
+   "Profit": 48364.1918,
+   "Median_Profit": 12.4416,
+   "Loss_Rate": 0.0547138047,
+   "Margin_2019": 0.1544223923,
+   "Rugi_USD": -2331.3254
+  },
+  {
+   "State": "New York",
+   "Baris": 671,
+   "Profit": 37092.0324,
+   "Median_Profit": 12.8316,
+   "Loss_Rate": 0.0387481371,
+   "Margin_2019": 0.2350929581,
+   "Rugi_USD": -2002.9328
+  },
+  {
+   "State": "Washington",
+   "Baris": 336,
+   "Profit": 14746.6747,
+   "Median_Profit": 11.73905,
+   "Loss_Rate": 0.0416666667,
+   "Margin_2019": 0.2124667084,
+   "Rugi_USD": -325.5912
+  },
+  {
+   "State": "Michigan",
+   "Baris": 136,
+   "Profit": 12121.3712,
+   "Median_Profit": 29.4468,
+   "Loss_Rate": 0.0,
+   "Margin_2019": 0.2308484452,
+   "Rugi_USD": 0.0
+  },
+  {
+   "State": "Georgia",
+   "Baris": 115,
+   "Profit": 9994.4165,
+   "Median_Profit": 24.144,
+   "Loss_Rate": 0.0,
+   "Margin_2019": 0.2522775538,
+   "Rugi_USD": 0.0
+  }
+ ],
+ "state_negative": {
+  "n": 10,
+  "names": [
+   "Arizona",
+   "Colorado",
+   "Florida",
+   "Illinois",
+   "North Carolina",
+   "Ohio",
+   "Oregon",
+   "Pennsylvania",
+   "Tennessee",
+   "Texas"
+  ],
+  "loss_share": 0.9404390949021668,
+  "line_share": 0.38525564803804996,
+  "profit": -60446.2042
+ },
+ "loss_top5pct_share": 0.5406678172032828,
+ "orders_by_year": {
+  "2019": 1313,
+  "2020": 1687
+ },
+ "profit_by_year": {
+  "2019": 66871.4074,
+  "2020": 79079.1481
+ },
+ "q4_order_share": 0.36466666666666664,
+ "q4_profit_share": 0.294595733141968,
+ "top20_cust_profit_share": 0.9308557684797574,
+ "cust_negative_share": 0.19146183699870634,
+ "return_region": [
+  {
+   "Region": "Central",
+   "Retur": 15,
+   "Order": 405,
+   "Rate": 0.037037037
+  },
+  {
+   "Region": "East",
+   "Retur": 13,
+   "Order": 470,
+   "Rate": 0.0276595745
+  },
+  {
+   "Region": "South",
+   "Retur": 6,
+   "Order": 273,
+   "Rate": 0.021978022
+  },
+  {
+   "Region": "West",
+   "Retur": 70,
+   "Order": 539,
+   "Rate": 0.1298701299
+  }
+ ],
+ "return_overall": 0.06164789567279194,
+ "heat_region_category": [
+  {
+   "Region": "Central",
+   "Furniture": 64.08,
+   "Office Supplies": 24.44,
+   "Technology": 12.45
+  },
+  {
+   "Region": "East",
+   "Furniture": 29.53,
+   "Office Supplies": 13.31,
+   "Technology": 26.54
+  },
+  {
+   "Region": "South",
+   "Furniture": 21.65,
+   "Office Supplies": 17.49,
+   "Technology": 11.18
+  },
+  {
+   "Region": "West",
+   "Furniture": 22.87,
+   "Office Supplies": 6.08,
+   "Technology": 9.07
+  }
+ ],
+ "loss_by_year_region": [
+  {
+   "Region": "Central",
+   "2019": 0.2883,
+   "2020": 0.3183
+  },
+  {
+   "Region": "East",
+   "2019": 0.1908,
+   "2020": 0.193
+  },
+  {
+   "Region": "South",
+   "2019": 0.1695,
+   "2020": 0.1741
+  },
+  {
+   "Region": "West",
+   "2019": 0.1093,
+   "2020": 0.0978
+  }
+ ],
+ "loss_by_year_category": [
+  {
+   "Category": "Furniture",
+   "2019": 0.3357,
+   "2020": 0.3431
+  },
+  {
+   "Category": "Office Supplies",
+   "2019": 0.1368,
+   "2020": 0.1484
+  },
+  {
+   "Category": "Technology",
+   "2019": 0.1623,
+   "2020": 0.1442
+  }
+ ],
+ "machines_note": {
+  "profit": 38.10239999999958,
+  "profit_no_flag": -2761.8815999999997
+ },
+ "normality": [
+  {
+   "Variabel": "Profit",
+   "K2": 6249.52042468561,
+   "p": 0.0,
+   "skew": -3.9687463855149914,
+   "kurt": 337.02025458553896
+  },
+  {
+   "Variabel": "Sales 2019",
+   "K2": 3253.501391947085,
+   "p": 0.0,
+   "skew": 6.753077517147871,
+   "kurt": 72.03699762646798
+  },
+  {
+   "Variabel": "Sales 2020",
+   "K2": 3526.5489475274376,
+   "p": 0.0,
+   "skew": 5.394828872077233,
+   "kurt": 40.285759914946006
+  },
+  {
+   "Variabel": "log(1+Sales) 2019",
+   "K2": 116.06193581054552,
+   "p": 6.272936037417016e-26,
+   "skew": 0.286878798862749,
+   "kurt": -0.5977156998294082
+  },
+  {
+   "Variabel": "log(1+Sales) 2020",
+   "K2": 806.9312694097358,
+   "p": 5.985510680385132e-176,
+   "skew": 1.4578957882019996,
+   "kurt": 1.8238076639763823
+  }
+ ],
+ "state_test_groups": 32,
+ "tests": [
+  {
+   "Uji": "Kruskal-Wallis",
+   "Hubungan": "Profit ~ Category",
+   "Statistik": 223.03345943015555,
+   "df": 2,
+   "p": 3.70595076154868e-49,
+   "Efek": 0.037565169855566884,
+   "Ukuran_Efek": "ε²",
+   "Data": "semua",
+   "p_holm": 4.8177359900132845e-48
+  },
+  {
+   "Uji": "Kruskal-Wallis",
+   "Hubungan": "Profit ~ Region",
+   "Statistik": 117.51533403812608,
+   "df": 3,
+   "p": 2.6454914422901105e-25,
+   "Efek": 0.019465465585267055,
+   "Ukuran_Efek": "ε²",
+   "Data": "semua",
+   "p_holm": 2.9100405865191217e-24
+  },
+  {
+   "Uji": "Kruskal-Wallis",
+   "Hubungan": "Profit ~ Segment",
+   "Statistik": 0.9772509314268214,
+   "df": 2,
+   "p": 0.613469049164501,
+   "Efek": 0.0,
+   "Ukuran_Efek": "ε²",
+   "Data": "semua",
+   "p_holm": 1.0
+  },
+  {
+   "Uji": "Kruskal-Wallis",
+   "Hubungan": "Profit ~ Ship Mode",
+   "Statistik": 8.120322199802162,
+   "df": 3,
+   "p": 0.043589370829139856,
+   "Efek": 0.0008703590344725756,
+   "Ukuran_Efek": "ε²",
+   "Data": "semua",
+   "p_holm": 0.3923043374622587
+  },
+  {
+   "Uji": "Kruskal-Wallis",
+   "Hubungan": "Profit ~ Payment Mode",
+   "Statistik": 1.2386763954976487,
+   "df": 2,
+   "p": 0.5383005682655237,
+   "Efek": 0.0,
+   "Ukuran_Efek": "ε²",
+   "Data": "semua",
+   "p_holm": 1.0
+  },
+  {
+   "Uji": "Chi-square",
+   "Hubungan": "Is_Loss x Sub-Category",
+   "Statistik": 1130.9190157797377,
+   "df": 16,
+   "p": 9.859074144558773e-231,
+   "Efek": 0.43829723949750815,
+   "Ukuran_Efek": "Cramér's V",
+   "Data": "semua",
+   "p_holm": 1.478861121683816e-229
+  },
+  {
+   "Uji": "Chi-square",
+   "Hubungan": "Is_Loss x Category",
+   "Statistik": 245.4889944362417,
+   "df": 2,
+   "p": 4.9288111038072845e-54,
+   "Efek": 0.2042062337620826,
+   "Ukuran_Efek": "Cramér's V",
+   "Data": "semua",
+   "p_holm": 6.900335545330198e-53
+  },
+  {
+   "Uji": "Chi-square",
+   "Hubungan": "Is_Loss x Region",
+   "Statistik": 217.3930643061221,
+   "df": 3,
+   "p": 7.349248308994495e-47,
+   "Efek": 0.19216567875156484,
+   "Ukuran_Efek": "Cramér's V",
+   "Data": "semua",
+   "p_holm": 8.819097970793393e-46
+  },
+  {
+   "Uji": "Chi-square",
+   "Hubungan": "Is_Loss x Segment",
+   "Statistik": 0.40587521610928884,
+   "df": 2,
+   "p": 0.8163291722018625,
+   "Efek": 0.00830327168802793,
+   "Ukuran_Efek": "Cramér's V",
+   "Data": "semua",
+   "p_holm": 1.0
+  },
+  {
+   "Uji": "Chi-square",
+   "Hubungan": "Is_Loss x Ship Mode",
+   "Statistik": 7.608454351680168,
+   "df": 3,
+   "p": 0.05483631063634412,
+   "Efek": 0.0359501909725549,
+   "Ukuran_Efek": "Cramér's V",
+   "Data": "semua",
+   "p_holm": 0.438690485090753
+  },
+  {
+   "Uji": "Chi-square",
+   "Hubungan": "Is_Loss x Payment Mode",
+   "Statistik": 1.2452774858886781,
+   "df": 2,
+   "p": 0.5365268117032576,
+   "Efek": 0.01454407315199677,
+   "Ukuran_Efek": "Cramér's V",
+   "Data": "semua",
+   "p_holm": 1.0
+  },
+  {
+   "Uji": "Chi-square",
+   "Hubungan": "Is_Loss x Negara_Bagian",
+   "Statistik": 1550.7168975688196,
+   "df": 31,
+   "p": 4.438569913957291e-307,
+   "Efek": 0.5132385173619506,
+   "Ukuran_Efek": "Cramér's V",
+   "Data": "semua",
+   "p_holm": 7.101711862331666e-306
+  },
+  {
+   "Uji": "Chi-square",
+   "Hubungan": "Returned x Region",
+   "Statistik": 64.41990468548435,
+   "df": 3,
+   "p": 6.674777053343721e-14,
+   "Efek": 0.1954125705374583,
+   "Ukuran_Efek": "Cramér's V",
+   "Data": "order 2020",
+   "p_holm": 6.674777053343721e-13
+  },
+  {
+   "Uji": "Chi-square",
+   "Hubungan": "Returned x Segment",
+   "Statistik": 0.17240492772240285,
+   "df": 2,
+   "p": 0.9174084703546476,
+   "Efek": 0.010109211810991005,
+   "Ukuran_Efek": "Cramér's V",
+   "Data": "order 2020",
+   "p_holm": 1.0
+  },
+  {
+   "Uji": "Chi-square",
+   "Hubungan": "Returned x Ship Mode",
+   "Statistik": 1.6743418029506247,
+   "df": 3,
+   "p": 0.6426531846475461,
+   "Efek": 0.03150391440710407,
+   "Ukuran_Efek": "Cramér's V",
+   "Data": "order 2020",
+   "p_holm": 1.0
+  },
+  {
+   "Uji": "Mann-Whitney",
+   "Hubungan": "Profit ~ Returned",
+   "Statistik": 461084.0,
+   "df": null,
+   "p": 0.055630124686749674,
+   "Efek": 0.06837761310922352,
+   "Ukuran_Efek": "rank-biserial",
+   "Data": "baris 2020",
+   "p_holm": 0.438690485090753
+  }
+ ],
+ "stability": [
+  {
+   "Uji": "Chi-square",
+   "Hubungan": "Is_Loss x Region",
+   "Statistik": 74.00653075330341,
+   "df": 3,
+   "p": 5.9158190692791195e-16,
+   "Efek": 0.1692672037842162,
+   "Ukuran_Efek": "Cramér's V",
+   "Data": "2019"
+  },
+  {
+   "Uji": "Chi-square",
+   "Hubungan": "Is_Loss x Region",
+   "Statistik": 145.43701936063118,
+   "df": 3,
+   "p": 2.540890721459319e-31,
+   "Efek": 0.20980578716872625,
+   "Ukuran_Efek": "Cramér's V",
+   "Data": "2020"
+  },
+  {
+   "Uji": "Chi-square",
+   "Hubungan": "Is_Loss x Category",
+   "Statistik": 110.58643279328523,
+   "df": 2,
+   "p": 9.693067392736545e-25,
+   "Efek": 0.20691344974308906,
+   "Ukuran_Efek": "Cramér's V",
+   "Data": "2019"
+  },
+  {
+   "Uji": "Chi-square",
+   "Hubungan": "Is_Loss x Category",
+   "Statistik": 136.27557596138726,
+   "df": 2,
+   "p": 2.5593794048633363e-30,
+   "Efek": 0.20309021239557537,
+   "Ukuran_Efek": "Cramér's V",
+   "Data": "2020"
+  },
+  {
+   "Uji": "Chi-square",
+   "Hubungan": "Is_Loss x Sub-Category",
+   "Statistik": 457.9651565473635,
+   "df": 16,
+   "p": 2.419573281616497e-87,
+   "Efek": 0.4210697236500671,
+   "Ukuran_Efek": "Cramér's V",
+   "Data": "2019"
+  },
+  {
+   "Uji": "Chi-square",
+   "Hubungan": "Is_Loss x Sub-Category",
+   "Statistik": 682.3628899643194,
+   "df": 16,
+   "p": 7.315170026685462e-135,
+   "Efek": 0.4544516458495347,
+   "Ukuran_Efek": "Cramér's V",
+   "Data": "2020"
+  }
+ ],
+ "spearman": [
+  {
+   "Pasangan": "Sales - Profit",
+   "rho_gabungan": 0.36522825954213806,
+   "rho_2019": 0.5114546327206677,
+   "lo_2019": 0.4806237049502505,
+   "hi_2019": 0.5410227243954169,
+   "p_2019": 3.372045899665796e-172,
+   "rho_2020": 0.37733840367695265,
+   "lo_2020": 0.3459111262267948,
+   "hi_2020": 0.4079199459225331,
+   "p_2020": 2.699661234651465e-112,
+   "p_holm_2019": 4.720864259532115e-171,
+   "p_holm_2020": 3.509559605046905e-111
+  },
+  {
+   "Pasangan": "Sales - Quantity",
+   "rho_gabungan": 0.2235095327389337,
+   "rho_2019": 0.3154425816923602,
+   "lo_2019": 0.27814947836516013,
+   "hi_2019": 0.35178612093626704,
+   "p_2019": 9.001371853500118e-61,
+   "rho_2020": 0.23534604003726295,
+   "lo_2020": 0.20090996186566554,
+   "hi_2020": 0.2692011909431859,
+   "p_2020": 8.17036176528098e-43,
+   "p_holm_2019": 1.0801646224200142e-59,
+   "p_holm_2020": 8.17036176528098e-42
+  },
+  {
+   "Pasangan": "Quantity - Profit",
+   "rho_gabungan": 0.2356438367144569,
+   "rho_2019": 0.22852428738579803,
+   "lo_2019": 0.18941388723402555,
+   "hi_2019": 0.2669107080988592,
+   "p_2019": 5.931594243271643e-32,
+   "rho_2020": 0.24095863812734494,
+   "lo_2020": 0.20661298861049668,
+   "hi_2020": 0.27471118745659856,
+   "p_2020": 7.413568287040356e-45,
+   "p_holm_2019": 5.338434818944478e-31,
+   "p_holm_2020": 8.154925115744392e-44
+  },
+  {
+   "Pasangan": "Unit_Price - Profit_Margin",
+   "rho_gabungan": -0.268142677756893,
+   "rho_2019": -0.22207170960790362,
+   "lo_2019": -0.2605859540898529,
+   "hi_2019": -0.18285177304252448,
+   "p_2019": 3.17772394144647e-30,
+   "rho_2020": -0.04837236452193109,
+   "lo_2020": -0.08436999191421106,
+   "hi_2020": -0.012248638280644526,
+   "p_2020": 0.00541850185397745,
+   "p_holm_2019": 2.542179153157176e-29,
+   "p_holm_2020": 0.03792951297784215
+  },
+  {
+   "Pasangan": "Ship_Lead_Days - Profit",
+   "rho_gabungan": -0.011394460032439463,
+   "rho_2019": -0.00810418645652138,
+   "lo_2019": -0.048967878274934006,
+   "hi_2019": 0.03278659049082691,
+   "p_2019": 0.6805679247544816,
+   "rho_2020": -0.014296558671458794,
+   "lo_2020": -0.05041564840622644,
+   "hi_2020": 0.02185987952508073,
+   "p_2020": 0.4113595958057653,
+   "p_holm_2019": 1.0,
+   "p_holm_2020": 1.0
+  },
+  {
+   "Pasangan": "Order_Lines - Profit",
+   "rho_gabungan": -0.004132414525493826,
+   "rho_2019": -0.016435187028589232,
+   "lo_2019": -0.05727661944163424,
+   "hi_2019": 0.024461162469966893,
+   "p_2019": 0.40375078750865906,
+   "rho_2020": 0.0056689624528300136,
+   "lo_2020": -0.030482425641191694,
+   "hi_2020": 0.04180553834882244,
+   "p_2020": 0.7446258272218073,
+   "p_holm_2019": 1.0,
+   "p_holm_2020": 1.0
+  },
+  {
+   "Pasangan": "Customer_Prior_Orders - Profit_Margin",
+   "rho_gabungan": -0.20145599757583724,
+   "rho_2019": 0.0008823328008922436,
+   "lo_2019": -0.039999024752196466,
+   "hi_2019": 0.041760741304587186,
+   "p_2019": 0.9642497475260472,
+   "rho_2020": -0.039699194412958695,
+   "lo_2020": -0.07573566089094583,
+   "hi_2020": -0.0035591594896645317,
+   "p_2020": 0.02249153083885327,
+   "p_holm_2019": 1.0,
+   "p_holm_2020": 0.13494918503311962
+  }
+ ],
+ "posthoc_region": [
+  {
+   "Pasangan": "West vs East",
+   "median_a": 10.7301,
+   "median_b": 8.10345,
+   "rank_biserial": 0.10669236390139636,
+   "p": 3.4228823024934534e-08,
+   "p_holm": 1.3691529209973814e-07
+  },
+  {
+   "Pasangan": "West vs South",
+   "median_a": 10.7301,
+   "median_b": 8.3524,
+   "rank_biserial": 0.0733470360744477,
+   "p": 0.001505662153477487,
+   "p_holm": 0.003011324306954974
+  },
+  {
+   "Pasangan": "West vs Central",
+   "median_a": 10.7301,
+   "median_b": 5.307600000000001,
+   "rank_biserial": 0.2195387413204013,
+   "p": 6.66371318719588e-27,
+   "p_holm": 3.9982279123175276e-26
+  },
+  {
+   "Pasangan": "East vs South",
+   "median_a": 8.10345,
+   "median_b": 8.3524,
+   "rank_biserial": -0.03199276335136103,
+   "p": 0.17516975226295695,
+   "p_holm": 0.17516975226295695
+  },
+  {
+   "Pasangan": "East vs Central",
+   "median_a": 8.10345,
+   "median_b": 5.307600000000001,
+   "rank_biserial": 0.11261683212122886,
+   "p": 8.081010970698951e-08,
+   "p_holm": 2.4243032912096854e-07
+  },
+  {
+   "Pasangan": "South vs Central",
+   "median_a": 8.3524,
+   "median_b": 5.307600000000001,
+   "rank_biserial": 0.1476384721180295,
+   "p": 1.716243953297543e-09,
+   "p_holm": 8.581219766487715e-09
+  }
+ ],
+ "logit": [
+  {
+   "Variabel": "Region_Central",
+   "OR": 4.144778198242553,
+   "lo": 3.2796755128958135,
+   "hi": 5.23807500012655,
+   "p": 1.1286540337002846e-32
+  },
+  {
+   "Variabel": "Region_East",
+   "OR": 2.156231318920851,
+   "lo": 1.696359792644921,
+   "hi": 2.7407708676271034,
+   "p": 3.428442032979922e-10
+  },
+  {
+   "Variabel": "Region_South",
+   "OR": 1.890645022823555,
+   "lo": 1.4385974497177574,
+   "hi": 2.4847385924594683,
+   "p": 4.9125684172700505e-06
+  },
+  {
+   "Variabel": "Category_Furniture",
+   "OR": 3.5263758729962174,
+   "lo": 2.986122157703104,
+   "hi": 4.16437310361575,
+   "p": 6.590320194156768e-50
+  },
+  {
+   "Variabel": "Category_Technology",
+   "OR": 1.165819024536878,
+   "lo": 0.9443680597663285,
+   "hi": 1.4391994560981,
+   "p": 0.15345826482639316
+  },
+  {
+   "Variabel": "Segment_Corporate",
+   "OR": 1.0417217215991572,
+   "lo": 0.8547656214815378,
+   "hi": 1.2695692456261838,
+   "p": 0.6854660523463716
+  },
+  {
+   "Variabel": "Segment_Home Office",
+   "OR": 1.0897112208398618,
+   "lo": 0.8675082443213061,
+   "hi": 1.368829117875782,
+   "p": 0.46027433065988677
+  },
+  {
+   "Variabel": "Sales_Log_Z",
+   "OR": 0.9203202166273332,
+   "lo": 0.846524304853898,
+   "hi": 1.0005493005651667,
+   "p": 0.0515243337684985
+  },
+  {
+   "Variabel": "Quantity",
+   "OR": 1.004153699496405,
+   "lo": 0.9715652090888678,
+   "hi": 1.0378352814402665,
+   "p": 0.8054895704059177
+  },
+  {
+   "Variabel": "Tahun_2020",
+   "OR": 1.049116006832611,
+   "lo": 0.8832749063547921,
+   "hi": 1.2460949449302012,
+   "p": 0.5849550515500033
+  }
+ ],
+ "logit_pseudo_r2": 0.08053227905405358,
+ "sensitivity": [
+  {
+   "Skenario": "Semua baris dipertahankan",
+   "Baris": 5901,
+   "Total_Profit": 175262.1059,
+   "Furniture": 10006.6112,
+   "Technology": 90458.2486,
+   "Office": 74797.2461,
+   "Loss_Central": 0.30412744388124546,
+   "Loss_West": 0.10257759074171488,
+   "V_Region": 0.19138577069481139
+  },
+  {
+   "Skenario": "Dipakai: buang Profit > Sales",
+   "Baris": 5887,
+   "Total_Profit": 145950.55550000002,
+   "Furniture": 9594.0718,
+   "Technology": 67561.4502,
+   "Office": 68795.0335,
+   "Loss_Central": 0.30523255813953487,
+   "Loss_West": 0.10268562401263823,
+   "V_Region": 0.19216567875156484
+  },
+  {
+   "Skenario": "Buang semua margin > 50%",
+   "Baris": 5872,
+   "Total_Profit": 134024.0717,
+   "Furniture": 8548.932999999999,
+   "Technology": 57685.7563,
+   "Office": 67789.3824,
+   "Loss_Central": 0.3058994901675164,
+   "Loss_West": 0.10284810126582279,
+   "V_Region": 0.19249131280907103
+  }
+ ],
+ "split": {
+  "fit": {
+   "n": 3772,
+   "from": "2019-01-01",
+   "to": "2020-06-30",
+   "loss": 0.19034994697773064
+  },
+  "val": {
+   "n": 941,
+   "from": "2020-07-01",
+   "to": "2020-10-02",
+   "loss": 0.15409139213602552
+  },
+  "test": {
+   "n": 1174,
+   "from": "2020-10-03",
+   "to": "2020-12-31",
+   "loss": 0.20017035775127767
+  }
+ },
+ "split_overlap": 0,
+ "n_features_candidate": 34,
+ "n_variables_candidate": 13,
+ "pca": {
+  "k90": 15,
+  "var_k90": 0.9094881564424288,
+  "pc1": 0.20181833171941566,
+  "pc2": 0.1224363133984698,
+  "top_pc1": [
+   "Sales_Z",
+   "Unit_Price_Z",
+   "State_Loss_TE"
+  ],
+  "top_pc2": [
+   "Month_Cos",
+   "Month_Sin",
+   "State_Loss_TE"
+  ]
+ },
+ "var_scores": [
+  {
+   "Variabel": "State_Loss_TE",
+   "MI": 0.1538638584,
+   "L1": 1.3863693412,
+   "RF": 0.4494947555,
+   "Vote": 3
+  },
+  {
+   "Variabel": "Sub-Category",
+   "MI": 0.0885586634,
+   "L1": 3.1536717827,
+   "RF": 0.2632600753,
+   "Vote": 3
+  },
+  {
+   "Variabel": "Unit_Price_Z",
+   "MI": 0.0717927048,
+   "L1": 0.201506791,
+   "RF": 0.080313635,
+   "Vote": 3
+  },
+  {
+   "Variabel": "Sales_Z",
+   "MI": 0.0275653967,
+   "L1": 0.005144387,
+   "RF": 0.0611600921,
+   "Vote": 3
+  },
+  {
+   "Variabel": "Region",
+   "MI": 0.0130155231,
+   "L1": 0.0,
+   "RF": 0.045951333,
+   "Vote": 2
+  },
+  {
+   "Variabel": "Bulan (sin+cos)",
+   "MI": 0.013416132,
+   "L1": 0.0,
+   "RF": 0.031146469,
+   "Vote": 2
+  },
+  {
+   "Variabel": "Quantity",
+   "MI": 0.0017977917,
+   "L1": 0.0,
+   "RF": 0.0186508383,
+   "Vote": 0
+  },
+  {
+   "Variabel": "Order_Lines",
+   "MI": 0.0058519283,
+   "L1": 0.0,
+   "RF": 0.0168523679,
+   "Vote": 0
+  },
+  {
+   "Variabel": "Ship Mode",
+   "MI": 0.0012717786,
+   "L1": 0.0,
+   "RF": 0.0103981058,
+   "Vote": 0
+  },
+  {
+   "Variabel": "Payment Mode",
+   "MI": 0.0001976283,
+   "L1": 0.0,
+   "RF": 0.0100861967,
+   "Vote": 0
+  },
+  {
+   "Variabel": "Segment",
+   "MI": 0.000210458,
+   "L1": 0.0,
+   "RF": 0.0086650941,
+   "Vote": 0
+  },
+  {
+   "Variabel": "Is_Weekend",
+   "MI": 0.0009041671,
+   "L1": 0.0,
+   "RF": 0.0040210372,
+   "Vote": 0
+  }
+ ],
+ "selected_vars": [
+  "Bulan (sin+cos)",
+  "Region",
+  "Sales_Z",
+  "State_Loss_TE",
+  "Sub-Category",
+  "Unit_Price_Z"
+ ],
+ "selected_n": 24,
+ "eval": [
+  {
+   "Set": "Semua kandidat",
+   "Val_AUC": 0.9570698319182117,
+   "Fitur": 34,
+   "ROC_AUC": 0.9478757392427436,
+   "AUC_CI": [
+    0.9358516488841997,
+    0.9607158420260647
+   ],
+   "PR_AUC": 0.8246918313125905,
+   "Precision": 0.6286549707602339,
+   "Recall": 0.9148936170212766,
+   "F1": 0.7452339688041595
+  },
+  {
+   "Set": "Seleksi per variabel",
+   "Val_AUC": 0.9578842488303587,
+   "Fitur": 24,
+   "ROC_AUC": 0.9499014343008634,
+   "AUC_CI": [
+    0.9384925644519406,
+    0.9617777395150712
+   ],
+   "PR_AUC": 0.8332756338915813,
+   "Precision": 0.624633431085044,
+   "Recall": 0.9063829787234042,
+   "F1": 0.7395833333333334
+  },
+  {
+   "Set": "Seleksi per dummy",
+   "Val_AUC": 0.9350459192514295,
+   "Fitur": 12,
+   "ROC_AUC": 0.915247094011284,
+   "AUC_CI": [
+    0.8945908594683895,
+    0.9345191952955654
+   ],
+   "PR_AUC": 0.7846945462721211,
+   "Precision": 0.5261780104712042,
+   "Recall": 0.8553191489361702,
+   "F1": 0.6515397082658023
+  },
+  {
+   "Set": "PCA 15 komponen",
+   "Val_AUC": 0.89927222318489,
+   "Fitur": 15,
+   "ROC_AUC": 0.8649083452291935,
+   "AUC_CI": [
+    0.8402936341993349,
+    0.8933649604830441
+   ],
+   "PR_AUC": 0.7068342599817703,
+   "Precision": 0.43875278396436523,
+   "Recall": 0.8382978723404255,
+   "F1": 0.5760233918128655
+  }
+ ],
+ "eval_base_pr": 0.20017035775127767,
+ "sel_dummy_n": 12,
+ "eval_nosales": {
+  "Fitur": 22,
+  "ROC_AUC": 0.9496385924364987,
+  "PR_AUC": 0.8356969191748034,
+  "Precision": 0.621301775147929,
+  "Recall": 0.8936170212765957,
+  "F1": 0.7329842931937173
+ },
+ "audit": {
+  "missing_train": 0,
+  "missing_test": 0,
+  "inf": 0,
+  "same_columns": true,
+  "train_shape": [
+   4713,
+   24
+  ],
+  "test_shape": [
+   1174,
+   24
+  ],
+  "split_overlap": 0
+ },
+ "order_peak": {
+  "2020-11": 261,
+  "2020-09": 226,
+  "2020-12": 224
+ },
+ "corr_sales_profit": {
+  "2019": 0.5114546327206678,
+  "2020": 0.3773384036769526
+ }
+}

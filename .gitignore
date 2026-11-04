@@ -1,0 +1,11 @@
+# Data diunduh dari Kaggle dan tidak didistribusikan ulang
+data/
+output/*.csv
+
+# Lingkungan Python
+.venv/
+__pycache__/
+*.pyc
+
+# Berkas sementara Word
+~$*
