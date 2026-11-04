@@ -15,35 +15,18 @@ Soal dan jawaban Ujian Tengah Semester mata kuliah Business Information System E
 
 **Dosen pengampu:** Robert Marco, S.T., M.T., Ph.D dan Dr. Hartatik, S.T., M.Cs
 
-## Soal
-
-**Petunjuk**
+## Petunjuk Ujian
 
 1. Tugas kelompok maksimal 3 mahasiswa dan wajib memilih 1 Dataset (dari 3 dataset yang tersedia)
 2. Analisis dilakukan secara kuantitatif dan interpretatif.
 3. Jawaban disusun dalam bentuk laporan singkat + visualisasi (grafik/tabel).
 4. Sertakan insight pemasaran / keputusan bisnis dari hasil analisis.
 
-**Dataset**
+**Pilihan dataset:**
 
 - Dataset 1, IHSG Stock Data: https://www.kaggle.com/datasets/muamkh/ihsgstockdata/data
 - Dataset 2, Superstore Sales Dataset: https://www.kaggle.com/datasets/ayush12nagar/superstore-sales-dataset
 - Dataset 3, Coffee Shop Dataset: https://www.kaggle.com/datasets/ahmedabbas757/coffee-sales
-
-**Tugas**
-
-1. Jelaskan preprocessing data secara detail (Pilih tahapan preprocessing yang sesuai dengan data yang dipilih), seperti:
-   - a. Data Cleaning (Penangan missing value, data duplikat)
-   - b. Data Filtering dan outlier handling
-   - c. Feature Transformation
-   - d. Feature Engineering
-   - e. Dimensionality Reduction dan Feature Selection
-   - f. Split data
-2. Analisis Statistik Deskriptif dan Distribusi Data? Jelaskan
-3. Uji Statistik Inferensial dan Hubungan Antar Variabel? Jelaskan
-4. Tambahkan tampilan visualisasi (Heatmap, Histogram, Bar Chart)? Jelaskan
-
-# Jawaban
 
 ## Ringkasan Jawaban
 
@@ -55,7 +38,7 @@ Setelah dibersihkan, data berisi 5.887 baris transaksi dari 3.000 order (2019–
 - **Retur West 13,0%**, tiga sampai enam kali region lain (order 2020).
 - **Risiko rugi dapat diprediksi** sebelum pengiriman dengan ROC-AUC 0,950 pada data uji.
 
-> **Temuan kualitas data yang menentukan analisis.** Mulai 1 Januari 2020, nilai Sales bergeser sehingga Sales dan margin 2020 tidak sebanding dengan 2019, sementara Profit tetap stabil. Karena itu laporan ini memakai **Profit dan status rugi** sebagai metrik utama, dan klaim seperti “Sales naik” atau “margin anjlok” tidak dibuat. Buktinya ada di Jawaban Soal 1 bagian b.
+> **Temuan kualitas data yang menentukan analisis.** Mulai 1 Januari 2020, nilai Sales bergeser sehingga Sales dan margin 2020 tidak sebanding dengan 2019, sementara Profit tetap stabil. Karena itu laporan ini memakai **Profit dan status rugi** sebagai metrik utama, dan klaim seperti “Sales naik” atau “margin anjlok” tidak dibuat. Buktinya ada di Soal 1b.
 
 ## Dataset yang Dipilih
 
@@ -63,9 +46,15 @@ Kami memilih **Dataset 2, Superstore Sales** (kaggle.com/datasets/ayush12nagar/s
 
 **Pertanyaan bisnis:** di mana perusahaan kehilangan profit, apa yang berhubungan dengannya, dan keputusan apa yang perlu diambil? Untuk tahap pemodelan, target disiapkan berupa `Is_Loss` (1 jika Profit < 0).
 
-## Jawaban Soal 1: Preprocessing Data
+## Soal 1
 
-### a. Data Cleaning
+**Soal:** Jelaskan preprocessing data secara detail (Pilih tahapan preprocessing yang sesuai dengan data yang dipilih), seperti bagian a sampai f berikut.
+
+### Soal 1a
+
+**Soal:** Data Cleaning (Penangan missing value, data duplikat)
+
+**Jawaban:**
 
 **Tabel 1.** Hasil data cleaning
 
@@ -77,7 +66,11 @@ Kami memilih **Dataset 2, Superstore Sales** (kaggle.com/datasets/ayush12nagar/s
 | Tipe dan konsistensi | Tanggal bertipe teks (dd-mm-yyyy); 1 order punya dua tanggal; nama kolom pertama rusak | Tanggal diparse, tanggal order diseragamkan ke yang paling awal, kolom diganti nama. |
 | Kolom tidak berguna | `Country` konstan; `Customer Name` duplikat dari ID; `Product Name` tidak konsisten (28 Product ID punya >1 nama) | Dihapus. Identitas cukup memakai ID dan nama pribadi tidak diperlukan untuk analisis. |
 
-### b. Data Filtering dan Outlier Handling
+### Soal 1b
+
+**Soal:** Data Filtering dan outlier handling
+
+**Jawaban:**
 
 **Pergeseran Sales 2020.** Median Sales per baris melompat dari $52,34 (2019) ke $145,25 (2020), sedangkan median Profit ($8,72 ke $8,24) dan persentase baris rugi (18,5% ke 18,8%) nyaris tidak berubah. Untuk mengujinya, kami membandingkan pasangan transaksi dengan produk, jumlah, dan profit yang sama persis:
 
@@ -109,7 +102,11 @@ Pada 2019 transaksi yang sama selalu bernilai sama, sedangkan yang melibatkan 20
 
 Persentase rugi per region hampir tidak berubah, jadi temuan utama tidak bergantung pada keputusan ini. Sebaliknya, peringkat total profit Technology dan Office Supplies dapat bertukar, sehingga keduanya sebaiknya dianggap setara. Machines juga rapuh: profitnya $38, tetapi menjadi −$2.762 tanpa satu baris yang ditandai.
 
-### c. Feature Transformation
+### Soal 1c
+
+**Soal:** Feature Transformation
+
+**Jawaban:**
 
 - **Log:** `log(1 + Sales)` dan `log(1 + harga satuan)` karena distribusinya sangat miring. Skewness Sales 2019 turun dari 6,75 menjadi 0,29; pada 2020 dari 5,39 menjadi 1,46.
 - **Standardisasi per tahun** untuk Sales dan harga satuan agar pergeseran 2020 tidak terbaca sebagai sinyal; **StandardScaler** untuk fitur numerik lain.
@@ -119,7 +116,11 @@ Persentase rugi per region hampir tidak berubah, jadi temuan utama tidak bergant
 
 Semua parameter transformasi dihitung dari data train saja, lalu diterapkan ke data validasi dan test.
 
-### d. Feature Engineering
+### Soal 1d
+
+**Soal:** Feature Engineering
+
+**Jawaban:**
 
 **Tabel 4.** Fitur hasil feature engineering
 
@@ -130,14 +131,18 @@ Semua parameter transformasi dihitung dari data train saja, lalu diterapkan ke d
 | `Unit_Price` | Sales / Quantity | Tingkat harga produk |
 | `Ship_Lead_Days` | Ship Date − Order Date | Kinerja logistik; tidak dipakai model karena baru diketahui setelah order |
 | `Order_Lines` | Jumlah baris dalam satu order | Ukuran keranjang belanja |
-| `Customer_Prior_Orders` | Jumlah order pelanggan sebelumnya | Loyalitas; tidak dipakai model karena nilainya naik mengikuti waktu (lihat Jawaban Soal 3) |
+| `Customer_Prior_Orders` | Jumlah order pelanggan sebelumnya | Loyalitas; tidak dipakai model karena nilainya naik mengikuti waktu (lihat Soal 3) |
 | Komponen waktu | Tahun, bulan, kuartal, akhir pekan | Musiman dan kontrol tahun |
 
-### e. Dimensionality Reduction dan Feature Selection
+### Soal 1e
+
+**Soal:** Dimensionality Reduction dan Feature Selection
+
+**Jawaban:**
 
 **PCA** membutuhkan 15 dari 34 komponen untuk menjelaskan 90,9% varians, dengan dua komponen pertama hanya 20,2% dan 12,2%. Artinya tidak ada struktur berdimensi rendah yang kuat. **Seleksi fitur** menggabungkan dua pendekatan dengan tiga skor: filter (mutual information), embedded (Lasso L1 dan Random Forest importance). Variabel lolos jika masuk 6 besar pada minimal 2 dari 3 skor, dan dinilai per variabel supaya kategori tidak terpecah.
 
-**Tabel 5.** Skor seleksi fitur per variabel (dihitung hanya pada data train, lihat Jawaban Soal 1 bagian f)
+**Tabel 5.** Skor seleksi fitur per variabel (dihitung hanya pada data train, lihat Soal 1f)
 
 | **Variabel** | **Mutual info** | **Lasso \|koef\|** | **RF importance** | **Vote** | **Status** |
 |---|---|---|---|---|---|
@@ -165,7 +170,11 @@ Semua parameter transformasi dihitung dari data train saja, lalu diterapkan ke d
 
 **Keputusan:** dipakai **seleksi per variabel**, karena dengan 24 fitur kinerjanya setara dengan semua kandidat (AUC validasi tertinggi), sedangkan PCA dan seleksi per dummy menurunkan kinerja. Sebagai pembanding, proporsi kelas rugi pada data test adalah 0,200, jadi PR-AUC 0,833 jauh di atas tebakan acak. Tanpa fitur Sales dan harga satuan, AUC tetap 0,950, sehingga sinyal utamanya berasal dari wilayah dan produk, bukan dari Sales yang bermasalah. Data final setelah model dilatih ulang pada train + validasi: train 4.713 × 24 dan test 1.174 × 24, tanpa nilai kosong maupun tak hingga.
 
-### f. Split Data
+### Soal 1f
+
+**Soal:** Split data
+
+**Jawaban:**
 
 Data dibagi secara **kronologis**, bukan acak, karena model nantinya memprediksi transaksi masa depan. Satu order tidak pernah terpecah sehingga tidak ada kebocoran antarbagian (order yang tumpang tindih: 0).
 
@@ -179,7 +188,11 @@ Data dibagi secara **kronologis**, bukan acak, karena model nantinya memprediksi
 
 Proporsi rugi sekitar 19% tergolong tidak seimbang, tetapi kami memakai `class_weight="balanced"` dan tidak memakai oversampling, supaya tidak menciptakan transaksi sintetis.
 
-## Jawaban Soal 2: Statistik Deskriptif dan Distribusi Data
+## Soal 2
+
+**Soal:** Analisis Statistik Deskriptif dan Distribusi Data? Jelaskan
+
+**Jawaban:**
 
 **Tabel 8.** Statistik deskriptif (margin dalam persen; Sales dan margin dipisah per tahun)
 
@@ -214,7 +227,11 @@ Proporsi rugi sekitar 19% tergolong tidak seimbang, tetapi kami memakai `class_w
 
 Central dan Furniture menonjol sebagai titik lemah, sementara ketiga segmen hampir sama. Antartahun, jumlah order naik dari 1.313 ke 1.687 (28,5%) dan profit naik dari $66.871 ke $79.079 (18,3%). Kuartal IV menyumbang 36,5% order tetapi hanya 29,5% profit. Dari sisi pelanggan, 20% teratas menghasilkan 93% profit bersih dan 19% pelanggan bernilai negatif.
 
-## Jawaban Soal 3: Uji Statistik Inferensial dan Hubungan Antar Variabel
+## Soal 3
+
+**Soal:** Uji Statistik Inferensial dan Hubungan Antar Variabel? Jelaskan
+
+**Jawaban:**
 
 Karena data tidak normal, kami memakai **Kruskal-Wallis** dan **Mann-Whitney** untuk Profit, **Chi-square** untuk variabel kategorik, dan **Spearman** untuk korelasi, dengan taraf signifikansi α = 0,05. Nilai p dikoreksi metode **Holm** karena banyak uji dilakukan sekaligus. Dengan ribuan baris, efek kecil pun mudah signifikan, sehingga **ukuran efek** ikut dilaporkan. H₀ setiap uji: tidak ada perbedaan atau hubungan antarkelompok.
 
@@ -279,7 +296,11 @@ Sales berhubungan positif sedang dengan Profit, tetapi melemah dari ρ = 0,51 ke
 
 Setelah variabel lain dikendalikan, peluang (odds) rugi di **Central 4,1 kali** West dan pada **Furniture 3,5 kali** Office Supplies. Segmen, Quantity, dan tahun tidak signifikan. Tidak signifikannya tahun memperkuat bahwa risiko rugi stabil antartahun. Model ini sengaja sederhana untuk tujuan penjelasan (pseudo R² = 0,081).
 
-## Jawaban Soal 4: Visualisasi Data
+## Soal 4
+
+**Soal:** Tambahkan tampilan visualisasi (Heatmap, Histogram, Bar Chart)? Jelaskan
+
+**Jawaban:**
 
 ### Histogram
 
@@ -317,7 +338,11 @@ Bar chart memudahkan perbandingan antarproduk. Tables (−$11.092) dan Supplies 
 
 Kerugian sangat terkonsentrasi secara geografis. Texas mencatat kerugian bersih terbesar (−$14.202), disusul Illinois (−$9.555), Ohio (−$9.339), dan Pennsylvania (−$9.298). Sebaliknya, California dan New York memiliki persentase rugi di bawah 6%.
 
-## Insight Pemasaran dan Keputusan Bisnis
+## Petunjuk 4: Insight Pemasaran
+
+**Soal:** Sertakan insight pemasaran / keputusan bisnis dari hasil analisis.
+
+**Jawaban:**
 
 **Tabel 13.** Rekomendasi berdasarkan prioritas
 
